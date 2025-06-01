@@ -4,6 +4,8 @@
 
 ## 📁 Project Structure
 
+```
+
 ChatSCUT/
 ├── app/                          # Web interface and HTML page
 │   ├── app.py
@@ -38,6 +40,8 @@ ChatSCUT/
 ├── rag_server.py                # RAG-based Q&A service
 ├── utilities.ipynb              # Miscellaneous notebook
 └── README.md
+
+```
 
 ## 💡 Main Features
 
