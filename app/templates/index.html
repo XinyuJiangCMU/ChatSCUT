@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问答系统</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <h1>简易问答系统</h1>
+    <input type="text" id="question" placeholder="请输入你的问题">
+    <button onclick="askQuestion()">提交</button>
+    <div id="answer"></div>
+
+    <script>
+        function askQuestion() {
+            var question = document.getElementById('question').value;
+            axios.post('/ask', { message: question })
+                .then(function (response) {
+                    document.getElementById('answer').innerHTML = response.data.answer;
+                })
+                .catch(function (error) {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>
